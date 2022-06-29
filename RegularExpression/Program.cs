@@ -7,7 +7,7 @@ public class Program
     {
         Console.WriteLine("Regular Exprassion");
 
-        // Enter a First Name
+        // For a First Name Validation
 
         Console.Write("Enter First Name:");
         var name = Console.ReadLine();
@@ -23,6 +23,8 @@ public class Program
             Console.WriteLine("Not Valid");
         }
 
+
+        // For Last Name Validation
         Console.Write("Enter Last Name:");
         var Lname = Console.ReadLine();
         String LnamePattern = "^[A-Z][a-z]{3,}$";
@@ -36,9 +38,10 @@ public class Program
             Console.WriteLine("Not Valid");
         }
 
+        // For Email Validation
         Console.Write("Enter Email:");
         var email = Console.ReadLine();
-        String emailPattern = "^abc.[A-Za-z]{3}@bl.co.[a-zA-Z]{2}$";
+        String emailPattern = "^abc.[A-Za-z]{3}@bl.co.[a-zA-Z]{3}$";
         Regex reg3 = new Regex(emailPattern);
         if (reg3.IsMatch(email))
         {
@@ -49,6 +52,7 @@ public class Program
             Console.WriteLine("Not Valid");
         }
 
+        // For Phone Number Validation
         Console.Write("Enter Phone Number:");
         var Pho = Console.ReadLine();
         String PhoPattern = "^91[ ][7-9]{2}[0-9]{8}$";
@@ -62,15 +66,16 @@ public class Program
             Console.WriteLine("Not Valid");
         }
 
+        // For Password Validation
         Console.Write("Enter a Password:");
         var Pass = Console.ReadLine();
-        String PassPattern = "^((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{7,20})$";
+        String PassPattern = "^((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,})$";
         /*
           (?=.*[0-9])   :   must contains one digit from 0-9
           (?=.*[a-z])   :   must contains one lowercase characters
           (?=.*[A-Z])   :   must contains one uppercase characters
           (?=.*[@#$%])  :   must contains one special symbols in the list "@#$%"
-         */
+        */
 
         Regex reg5 = new Regex(PassPattern);
         if (reg5.IsMatch(Pass))
