@@ -69,6 +69,7 @@ public class Program
         // For Password Validation
         Console.Write("Enter a Password:");
         var Pass = Console.ReadLine();
+
         String PassPattern = "^((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,})$";
         /*
           (?=.*[0-9])   :   must contains one digit from 0-9
